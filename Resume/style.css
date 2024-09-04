@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#myName {
+    color: rgb(255, 255, 255);
+}
+
+.parent-container {
+    border: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+}
+
+.container1,
+.container2 {
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container1 {
+    background-color: aqua;
+    width: 100%; 
+}
+
+.container2 {
+    background-color: rgb(45, 23, 159);
+    width: 100%; 
+}
+   
+
+img[alt="K.Sakthipriyen"] {
+    margin-top: 25px;
+    border-radius: 50%;
+    border: 5px solid rgba(57, 135, 195, 0.63);
+    width: 250px;
+    height: 250px;
+    align-self: center;
+    box-shadow: 0px 0px 20px rgba(25, 80, 229, 0.78);
+}
+
+.container1 h2 {
+    border-radius: 10px;
+    padding: 7px;
+    color: aliceblue;
+    background-color: rgb(49, 136, 150);
+    text-align: center;
+    font-style: normal;
+}
+
+.container2 .icon-container {
+    border-radius: 10px;
+    padding: 7px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(233, 236, 236);
+    font-style: normal;
+}
+
+div p {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: space-between;
+    padding-left: 25px;
+    gap: 20px;
+}
+
+.icon-container > h3 {
+    font-style: normal;
+    background-color: rgba(46, 23, 159, 0.548);
+    padding: 10px;
+    border-radius: 20px;
+    color: antiquewhite;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.line-spacing {
+    line-height: 0.5;
+}
+
+#MyVideo {
+    width: 100%; 
+    align-self: center;
+    border-radius: 20px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 30px black;
+}
+
+#Address{
+    color:rgb(255, 255, 255);
+}
+
+#Name-Address{
+    display:inline;
+}
+
+#map {
+    height: 400px;
+    width: 97.5%;
+    padding: 10px;
+    border-radius: 20px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#tailer{
+    padding: 10px;
+    background-color: gray;
+}
+
+.draggable {
+    width: 100px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    margin-bottom: 5px;
+    cursor: move;
+}
+
+@media (min-width: 768px) {
+    .parent-container {
+        flex-direction: row; 
+        justify-content: space-evenly;
+    }
+
+    .container1 #Name-Address{
+        display: none;
+    }
+    
+    .container1 {
+        width: 35%; 
+    }
+
+    .container2 {
+        width: 60%; 
+    }
+
+    .container2 *{
+        margin-left: 4px; 
+    }
+
+    #Address{
+        margin-left: 30px;
+    }
+
+    #myName {
+        font-size: 44pt;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+    img[alt="K.Sakthipriyen"] {
+        width: 250px; 
+        height: 250px; 
+    }
+
+    #MyVideo {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .container1,
+    .container2 {
+        width: 100%; 
+    }
+
+    .container2 *{
+        margin-left: -1px;
+    }
+
+    img[alt="K.Sakthipriyen"] {
+        width: 200px; 
+        height: 200px; 
+    }
+
+    #myName {
+        color: rgb(46, 23, 159);
+        font-size: 30pt;
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+
+    #Address{
+        color: rgb(46, 23, 159);
+        margin-left: 5px;
+    }
+
+    #MyVideo {
+        width: 100%; 
+    }
+
+    .container2 #Name-Address{
+        display: none;
+    }
+}
+
+.todoContainer{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+#taskInput {
+    width: 30%;
+    padding: 8px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #2D179F;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #4582a0;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    width:30%;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+#taskList li:hover {
+    background-color: #ddd;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+}
+
+.delete-btn:hover {
+    background-color: #da190b;
+}

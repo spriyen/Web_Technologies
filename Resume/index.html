@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parent-container">
+        <div class="container1">
+            <!-- My Image -->
+            <img src="./Assets/me.jpg" alt="K.Sakthipriyen" >
+            <div id="Name-Address">
+                <!-- name -->
+                <h1 id="myName">Sakthipriyen K</h1><br>
+                <!-- Address -->
+                <p id="Address">
+                    17, Pudhunagar,<br>
+                    PeriyaKalapet,<br>
+                    Puducherry,<br>
+                    605014.<br>
+                </p><br>
+                <hr>
+            </div>
+            <!-- About Me -->
+            <div>
+                <h2>About Me</h2><br>
+                <p style="line-height: 1.5;">I'm a B.Tech Computer Science Engineering student eager to kickstart my career as a software developer.
+                    While I lack professional experience, I'm well-versed in various programming languages and technologies.
+                    I'm enthusiastic, quick to learn, and eager to contribute as a fresher in any IT or software company,
+                    ready to tackle new challenges and grow professionally.</p>
+            </div>
+            <!-- Contact Me -->
+            <div>
+                <h2>Contact</h2><br>
+                <div class="icon-container">
+                    <img src="./Assets/gmail.png" alt="gmail" width="30px">
+                    <a href="#gmail">sakthipriyen@gmail.com</a>
+                </div>
+                <div class="icon-container" style="margin-top: 7px; margin-bottom: 7px;">
+                    <img src="./Assets/linkedin.png" alt="linkeden" width="30px">
+                    <a href="#linkedin">@sakthi_priyen</a>
+                </div>
+                <div class="icon-container">
+                    <img src="./Assets/phone.png" alt="phone number" width="30px">
+                    <a href="#phone">9360980042</a>
+                </div>
+            </div>
+            <!-- Soft Skills -->
+            <div draggable="true">
+                <h2>Soft Skills</h2><br>
+                <div class="icon-container">
+                    <h3>C/C++</h3>
+                    <h3>Java</h3>
+                    <h3>C#</h3>
+                    <h3>Python</h3>
+                    <h3>SQL/MySql</h3>
+                    <h3>Html</h3>
+                    <h3>Css</h3>
+                    <h3>Javascript</h3>
+                </div>
+            </div>
+            <!-- Hard Skills -->
+            <div draggable="true">
+                <h2>Hard Skills</h2><br>
+                <ul style="font-size: 14pt;line-height:2">
+                    <li>Problem solving</li>
+                    <li>Algorithmic thinking</li>
+                    <li>Quick learning</li>
+                </ul>
+            </div>
+            <!-- Additional -->
+            <div>
+                <h2>Additional</h2><br>
+                <ul style="margin-right: 25px;line-height:1.5">
+                    <li>Design Committee Associate
+                        Coordinator, ICON symposium</li>
+                    <li>Development workshop by
+                        Capgemini</li>
+                    <li>I often tackle coding challenges
+                        on platforms such as LeetCode,Hackerank.</li>
+                </ul>
+            </div>
+            <!-- Language -->
+            <div>
+                <h2>Language</h2><br>
+                <div class="icon-container">
+                    <h3>Tamil</h3>
+                    <h3>English</h3>
+                </div>
+            </div>
+            <canvas id="skillsChart" width="500" height="400"></canvas>
+            <script src="canvas.js"></script>
+        </div>
+        <div class="container2">
+            <!-- name -->
+            <div id="Name-Address">
+                <h1 id="myName">Sakthipriyen K</h1><br>
+                <!-- Address -->
+                <p id="Address">
+                    17, Pudhunagar,<br>
+                    PeriyaKalapet,<br>
+                    Puducherry,<br>
+                    605014.<br>
+                </p><br>
+                <hr>
+            </div>
+
+            <!-- Video -->
+            <video controls id="MyVideo">
+                <source src="./Assets/MyVideo.mp4">
+                This Browser does not suppport html5
+            </video>
+            <!-- Project -->
+            <div class="icon-container">
+                <img src="./Assets/project.png" alt="Project" width="30px">
+                <h2>Project</h2>
+            </div>
+            <ul style="color: aliceblue;list-style-type: square">
+                <li>
+                    <p style="font-size: 18pt;" >Road Link — An Android app built with Java</p><br>
+                    <p style="font-size: 16pt;font-style:italic;line-height: 0.7">Discription:</p><br>
+                    <ul style="margin-left: 25px;">
+                        <li>Real-time bus tracking app developed in Android Studio.</li>
+                        <li>Passengers track approaching buses on a map.</li>
+                        <li>Drivers receive passenger location info.</li>
+                        <li>Modern Android components, Google Maps API, Firebase.</li>
+                    </ul>
+                </li><br><br>
+                <li>
+                    <p style="font-size: 18pt;" >Store Management(CRUD) — Built using C# and MySql</p><br>
+                    <p style="font-size: 16pt;font-style:italic;line-height: 0.7">Discription:</p><br>
+                    <ul style="margin-left: 25px;">
+                        <li>Windows Forms app for store management.</li>
+                        <li>CRUD operations for product management.</li>
+                        <li>Customers view product details, add to cart, and complete.</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Education -->
+            <div class="icon-container">
+                <img src="./Assets/Education.png" alt="Education" width="30px">
+                <h2>Education</h2>
+            </div>
+            <ul style="list-style-type: square;color:aliceblue">
+                <li>
+                    <p style="font-size: 18pt;" >Puducherry Technological University, Puducherry</p><br>
+                    <p style="font-size: 16pt;font-style:italic;line-height: 0.7">Degree : B.Tech CSE (Pursuing)</p><br>
+                    <p style="font-size: 8pt;line-height: 0.4">FEBRUARY 2021 - JUNE 2025</p><br>
+                    <p style="font-size: 14pt;">Current CGPA : 8.53</p>
+                </li><br><br>
+                <li>
+                    <p style="font-size: 18pt;">Jothi Vallalar Higher Secondary School, Kalapet</p><br>
+                    <p style="font-size: 8pt;line-height: 0.4">2020 - 2021</p><br>
+                    <p style="font-size: 14pt;">Scored 93% in 12th board exams</p>
+                </li><br><br>
+                <li>
+                    <p style="font-size: 18pt;">Jothi Vallalar Higher Secondary School, Kalapet</p><br>
+                    <p style="font-size: 8pt;line-height: 0.4">2018 - 2019</p><br>
+                    <p style="font-size: 14pt;">Scored 90% in 10th board exams</p>
+                </li><br><br>
+            </ul>
+            <!-- Achievement -->
+            <div class="icon-container">
+                <img src="./Assets/medal_3112841.png" alt="Achievement" width="30px">
+                <h2>Achievement</h2>
+            </div>
+            <ul style="color: aliceblue;font-size:14pt">
+                <li >2nd prize in a coding contest
+                    conducted by IEEE</li><br>
+                <li>3rd prize in a Debugging
+                    Contest conducted by CYBROUS</li><br>
+                <li>Completed 2-week internship
+                    on Cloudlogic Technologies in
+                    Puducherry</li><br>
+            </ul>
+        </div>
+    </div><br><br>
+    <!-- map -->
+    <h1 style="font-size: xx-large;margin-left:10px">My Location</h1><br>
+    <div id="map"></div>
+    <script src="map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1wdHI61d2qhBHnVUhkUMXa8zCeLwrqdM&callback=initMap"></script>
+    <br>
+    <!-- Storage -->
+    <div class="todoContainer">
+        <h1>To-Do List with Storage</h1><br><br>
+        <input type="text" id="taskInput" placeholder="Add new task">
+        <button onclick="addTask()">Add</button><br><br>
+        <button onclick="displayTasks()">Display Tasks</button>
+        <button onclick="clearStorage()">Clear All Data</button><br><br>
+        <ul id="taskList"></ul>
+        <script src="WebStorage.js"></script>
+    </div>
+    
+    <center>
+        <p id="tailer">Copyright &copy; Sakthipriyen Resume. Study purpose.</p>  
+    </center>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $( function() {
+        $( ".container1" ).sortable();
+        $( ".container1" ).disableSelection();
+    } );
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,312 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f3;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px ;
+    padding: 10px;
+    color: #ffffff;
+    background-color: black;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(10,80px);
+    gap: 30px;
+    margin: 20px;
+}
+
+.view-space{
+    grid-column: span 3;
+    grid-row: span 10;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #ffffff,
+                inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    border:none;
+    padding: 7%;
+    overflow-y: auto;
+}
+
+.container > button{
+    background-color: #ecf0f3;
+    box-shadow:-5px -5px 12px #ffffff,
+                5px 5px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 30px; 
+    border: none;
+    font-size: large;
+    transition: box-shadow 0.3s ease;
+}
+
+.container  button:hover {
+    box-shadow: -2px -2px 6px #ffffff,
+                2px 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Experiment 1 Styles start */
+.calculator{
+    width:min-content;
+    display: grid;
+    grid-template-columns: repeat(4,80px);
+    grid-template-rows: repeat(6,80px);
+    gap: 15px;
+    background-color: #ecf0f3;
+    border: none;
+    box-shadow:-5px -5px 12px rgba(0, 0, 0, 0.16),
+                5px 5px 12px rgba(0, 0, 0, 0.16);
+    padding: 20px;
+    border-radius: 30px;
+    justify-content: center;
+    margin : 0 auto;
+}
+
+.calculator input{
+    grid-column: span 4;
+    border-radius: 30px;
+    border: none;
+    background-color: #ecf0f3;
+    box-shadow:inset -5px -5px 12px #ffffff,
+                inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+    font-size: xx-large;
+    padding: 20px;
+    text-align: end;
+}
+
+#val1,#val2{
+    margin: 20px;
+    border-radius: 30px;
+    border: none;
+    color: rgb(44, 44, 44);
+    background-color: #ecf0f3;
+    box-shadow:inset -5px -5px 12px #ffffff,
+                inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+    font-size: xx-large;
+    padding: 20px;
+}
+
+#equal{
+    grid-column: span 2;
+    border-radius: 30px;
+}
+
+.calculator button{
+    border-radius: 50%;
+    background-color: #ecf0f3;
+    box-shadow:-5px -5px 12px #ffffff,
+                5px 5px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 30px; 
+    border: none;
+    font-size: large;
+    transition: box-shadow 0.3s ease;
+}
+
+button[onclick="concat()"]{
+    margin: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #7d7d7e;
+    color:#ecf0f3;
+    border-radius: 30px; 
+    border: none;
+    font-size: larger;
+}
+/* End */
+
+/* 2nd Expt */
+#guessInput ,#numForFactorial{
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#guessButton, #restartButton ,#findFactorial{
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#guessButton:hover, #restartButton:hover ,#findFactorial:hover{
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#congratulation {
+    color: green;
+    font-size: 24px;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* end */
+
+/* Expt4 */
+.dom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#content{
+    font-size: xx-large;
+    background-color: #ffffff;
+}
+
+#myDiv, #myElement {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+ul {
+    background-color: #ffffff;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:#ecf0f3;
+    border-radius: 20px;
+}
+#myList button{
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 7px;
+    font-size: 10pt;
+}
+
+input[id="newItem"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* End */
+/*Expt - 5*/
+form{
+    display: block;
+    margin-top: 0rem;
+    unicode-bidi: isolate;
+    background-color: #ffffff;
+}
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}
+#form-title {
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-container label {
+    background-color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+.form-container input[type="text"],
+.form-container input[type="password"],
+select {
+    background-color: #ffffff;
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.form-container input[type="radio"] {
+    background-color: #ffffff;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Expt6 */
+#studentList {
+    background-color: #ecf0f3;
+    list-style-type: none;
+    padding: 0;
+}
+#studentList li {
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #c9c7c7;
+    border: 1px solid #505050;
+    border-radius: 4px;
+}
+#studentList li:hover {
+    background-color: #e0e0e0;
+}
+#studentDetails {
+    margin-top: 20px;
+}
+#studentDetails p {
+    margin: 5px 0;
+}
+.clearButton {
+    margin-top: 10px;
+}

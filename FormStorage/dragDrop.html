@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop Example</title>
+<style>
+    .container {
+        border: 2px solid #ccc;
+        padding: 20px;
+        margin: 20px;
+        min-height: 200px;
+    }
+    h1, p, div {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #999;
+        background-color: #f0f0f0;
+        cursor: move;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h1 draggable="true" ondragstart="drag(event)" id="drag1">Heading</h1>
+    <p draggable="true" ondragstart="drag(event)" id="drag2">Paragraph</p>
+    <div draggable="true" ondragstart="drag(event)" id="drag3">Div</div>
+</div>
+
+<script>
+    let draggedItem = null;
+
+    function drag(event) {
+        draggedItem = event.target;
+    }
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drop(event) {
+        event.preventDefault();
+        const target = event.target.closest('.container');
+        if (target) {
+            const boundingRect = target.getBoundingClientRect();
+            const mouseY = event.clientY;
+            const aboveMiddle = mouseY < boundingRect.top + boundingRect.height / 2;
+            if (aboveMiddle) {
+                target.insertBefore(draggedItem, target.firstChild);
+            } else {
+                target.appendChild(draggedItem);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

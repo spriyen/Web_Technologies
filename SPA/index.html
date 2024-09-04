@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store SPA</title>
+    <style>
+     body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; 
+    padding-left: 20px; 
+}
+
+nav .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+   
+   
+    padding: 20px;
+}
+
+.large-font {
+    font-size: 1.2em;
+}
+
+.book-detail {
+    text-align: left; 
+}
+
+.book-detail button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-detail button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.book-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .book-item:hover {
+            background-color: #f0f0f0;
+        }
+        .book-detail {
+            margin-top: 20px;
+        }
+        .book-detail button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .book-detail button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/book.png" alt="Book Icon">
+            <span style="color: white; font-size: 1.2em;">Shark Book Sellers</span>
+        </div>
+        <a href="#about">About</a>
+        <a href="#top-selling">Top Selling Books</a>
+        <a href="#book-detail">Book Detail</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div id="content"></div>
+
+    <script src="router.js"></script>
+</body>
+</html>

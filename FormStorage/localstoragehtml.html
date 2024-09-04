@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Storage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        #taskInput {
+            width: 70%;
+            padding: 8px;
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            width:30%;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        li:hover {
+            background-color: #ddd;
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            float: right;
+        }
+
+        .delete-btn:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List with Storage</h1>
+    <input type="text" id="taskInput" placeholder="Add new task">
+    <button onclick="addTask()">Add</button><br>
+    <button onclick="displayTasks()">Display Tasks</button>
+    <button onclick="clearStorage()">Clear All Data</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById("taskInput");
+
+            var taskText = taskInput.value;
+
+            if (taskText.trim() !== "") {
+                var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+                tasks.push(taskText);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+                displayTasks();
+                taskInput.value = "";
+            } else {
+                alert("Please enter a task!");
+            }
+        }
+
+        function displayTasks() {
+            var taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+
+            var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+            if (tasks.length === 0) {
+                taskList.innerHTML = "<p>No tasks found!</p>";
+            } else {
+                tasks.forEach(function(task, index) {
+                    var li = document.createElement("li");
+                    li.textContent = task;
+                    li.innerHTML += '<button class="delete-btn" onclick="deleteTask(' + index + ')">X</button>';
+                    taskList.appendChild(li);
+                });
+            }
+        }
+
+        function deleteTask(index) {
+            var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+            tasks.splice(index, 1);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+            displayTasks();
+        }
+
+        function clearStorage() {
+            localStorage.removeItem("tasks");
+            displayTasks();
+        }
+    </script>
+</body>
+</html>

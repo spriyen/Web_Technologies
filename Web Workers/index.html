@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker Example</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+        }
+        #result, #message {
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Fibonacci Calculator</h1>
+    <input type="number" id="inputNumber" placeholder="Enter a number" />
+    <button onclick="Fibonacci()">Calculate</button>
+    <button onclick="DisplayMsg()">Show Message</button>
+    <div id="result"></div>
+    <div id="message"></div>
+
+    <script>
+        let worker = new Worker('worker.js');
+        count = 0;
+        worker.onmessage = function(e) {
+            document.getElementById('result').textContent = 'Result:  ' + e.data;
+        };
+
+        function Fibonacci() {
+            const num = document.getElementById('inputNumber').value;
+            document.getElementById('result').textContent = 'Calculating...';
+            worker.postMessage(num);
+        }
+
+        function DisplayMsg() {
+            if(count%2 == 0)
+            {
+                document.getElementById('message').textContent = 'Hello! This is your message.';
+            }
+            else{
+                document.getElementById('message').textContent = '';
+            }
+            count++;
+        }
+    </script>
+</body>
+</html>

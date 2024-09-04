@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Animation</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="300"></canvas>
+
+    <script>
+        // Get the canvas element
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        // Define the rectangular area
+        var rectX = 0;
+        var rectY = 0;
+        var rectWidth = 400;
+        var rectHeight = 300;
+
+        // Define the line properties
+        var lineX = rectX;
+        var lineY = rectY;
+        var lineLength = rectWidth;
+        var lineDirectionX = 1; // 1 for right, -1 for left
+        var lineDirectionY = 1; // 1 for down, -1 for up
+
+        // Function to draw the rectangular area
+        function drawRect() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "lightgray";
+            ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+        }
+
+        // Function to draw the moving line
+        function drawLine() {
+            ctx.beginPath();
+            ctx.moveTo(lineX, lineY);
+
+            // Draw line along each side of the rectangle
+            if (lineY === rectY && lineX < rectX + rectWidth) {
+                // Top side
+                lineX += 2 * lineDirectionX;
+            } else if (lineX === rectX + rectWidth && lineY < rectY + rectHeight) {
+                // Right side
+                lineY += 2 * lineDirectionY;
+            } else if (lineY === rectY + rectHeight && lineX > rectX) {
+                // Bottom side
+                lineX -= 2 * lineDirectionX;
+            } else if (lineX === rectX && lineY > rectY) {
+                // Left side
+                lineY -= 2 * lineDirectionY;
+            }
+            lineX += 50;
+
+            ctx.lineTo(lineX, lineY);
+            ctx.strokeStyle = "red";
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            ctx.closePath();
+        }
+
+        // Function to animate the line movement
+        function animate() {
+            drawRect();
+            drawLine();
+
+            requestAnimationFrame(animate);
+        }
+        
+        // Start the animation
+        animate();
+    </script>
+    
+</body>
+</html>

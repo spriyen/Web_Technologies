@@ -1,0 +1,289 @@
+mine
+
+*{
+    margin: 0;
+} 
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#myName{
+    color: rgb(255, 255, 255);
+    font-size: 44pt;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.parent-container{
+    border: 10px;
+    display:flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 3px;
+    /* background-color: rgb(1, 10, 7); */
+    background-color: rgb(255, 255, 255);
+}
+
+.container1{
+    margin-top: 10px;
+    border-radius: 20px;
+    /* margin-left: 10px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 35%;
+    gap: 40px;
+}
+
+.container2{
+    margin-top: 10px;
+    border-radius: 20px;
+    /* margin-right: 10px; */
+    /* margin-left: 30px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(45, 23, 159);
+    width: 60%;
+    overflow: hidden;
+}
+
+img[alt="K.Sakthipriyen"]{
+    margin-top: 25px;
+    border-radius: 50%;
+    border: 5px solid rgba(57, 135, 195, 0.63);
+    width: 250px;
+    height: 250px;
+    align-self : center;
+    box-shadow: 0px 0px 20px rgba(25, 80, 229, 0.78) ;
+}
+
+.container1 h2{
+    border-radius: 10px;
+    padding: 7px;
+    color: aliceblue;
+    background-color: rgb(49, 136, 150);
+    text-align: center;
+    font-style: normal;
+}
+
+.container2 .icon-container{
+    border-radius: 10px;
+    padding: 7px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(233, 236, 236);
+    font-style: normal;
+}
+
+div p{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.icon-container{
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: space-between;
+    padding-left: 25px;
+    gap: 20px;
+}
+
+.icon-container > h3{
+    font-style: normal;
+    background-color: rgba(46, 23, 159, 0.548);
+    padding: 10px;
+    border-radius: 20px;
+    color: antiquewhite;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.line-spacing{
+    line-height: 0.5;
+}
+
+#MyVideo{
+    width: 750px;
+    align-self: center;
+    border-radius: 20px;
+    border: 3px solid white;
+    box-shadow:0px 0px 30px  black;
+}
+
+@media (max-width:400px){
+    #MyVideo {
+        width: 100px;
+    }
+    #MyName {
+        font-size: 10pt;
+    }
+}
+
+
+
+athodathu
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#myName {
+    color: rgb(255, 255, 255);
+    font-size: 44pt;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.parent-container {
+    border: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+.container1,
+.container2 {
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container1 {
+    background-color: aqua;
+    width: 100%; /* Fill 100% of the width initially */
+}
+
+.container2 {
+    background-color: rgb(45, 23, 159);
+    width: 100%; /* Fill 100% of the width initially */
+}
+
+img[alt="K.Sakthipriyen"] {
+    margin-top: 25px;
+    border-radius: 50%;
+    border: 5px solid rgba(57, 135, 195, 0.63);
+    width: 250px;
+    height: 250px;
+    align-self: center;
+    box-shadow: 0px 0px 20px rgba(25, 80, 229, 0.78);
+}
+
+.container1 h2 {
+    border-radius: 10px;
+    padding: 7px;
+    color: aliceblue;
+    background-color: rgb(49, 136, 150);
+    text-align: center;
+    font-style: normal;
+}
+
+.container2 .icon-container {
+    border-radius: 10px;
+    padding: 7px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(233, 236, 236);
+    font-style: normal;
+}
+
+div p {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    align-content: space-between;
+    padding-left: 25px;
+    gap: 20px;
+}
+
+.icon-container > h3 {
+    font-style: normal;
+    background-color: rgba(46, 23, 159, 0.548);
+    padding: 10px;
+    border-radius: 20px;
+    color: antiquewhite;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.line-spacing {
+    line-height: 0.5;
+}
+
+#MyVideo {
+    width: 100%; /* Fill 100% of the width initially */
+    align-self: center;
+    border-radius: 20px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 30px black;
+}
+
+@media (min-width: 768px) {
+    .parent-container {
+        flex-direction: row; /* Ensure containers are side by side on larger screens */
+    }
+
+    .container1 {
+        width: 35%; /* Adjust width for larger screens */
+    }
+
+    .container2 {
+        width: 60%; /* Adjust width for larger screens */
+    }
+
+    img[alt="K.Sakthipriyen"] {
+        width: 250px; /* Adjust image size for larger screens */
+        height: 250px; /* Adjust image size for larger screens */
+    }
+
+    #MyVideo {
+        width: 750px; /* Adjust video width for larger screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .container1,
+    .container2 {
+        width: 100%; /* Fill 100% of the width on smaller screens */
+    }
+
+    img[alt="K.Sakthipriyen"] {
+        width: 150px; /* Adjust image size for smaller screens */
+        height: 150px; /* Adjust image size for smaller screens */
+    }
+
+    #MyVideo {
+        width: 100%; /* Fill 100% of the width on smaller screens */
+    }
+}
